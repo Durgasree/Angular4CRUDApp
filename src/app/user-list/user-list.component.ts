@@ -14,9 +14,9 @@ export class UserListComponent implements OnInit {
   constructor(private usersService: UsersService,overlay: Overlay, public modal: Modal) {}
   users = this.usersService.ListUsers(); 
   title = 'Users List';
-  newUser = {id: (this.users.length + 1)};
+  newUser = {id: (this.users.length + 1),name: "",email: "",phone: ""};
   setNewUser(){
-    this.newUser = {id: (this.users.length + 1)};
+    this.newUser = {id: (this.users.length + 1),name: "",email: "",phone: ""};
   }
   createUser(){
     this.usersService.createUser(this.newUser);
