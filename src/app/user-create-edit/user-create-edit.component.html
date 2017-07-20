@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-lg-6"><h4> <i class="fa fa-edit"> </i> {{user.name}} </h4></div>
+  <div class="col-lg-6"> 
+    <h1 class="pull-right">
+     <a class="btn btn-sm" routerLink="/user/{{user.id}}" routerLinkActive="active" class="btn btn-sm btn-default"> 
+       <i class="fa fa-arrow-circle-left" aria-hidden="true"> </i> 
+     </a>
+    </h1> </div>
+</div>
+<hr>
+<div class="container">
+  <div class="form">
+      <input type="text" placeholder="Id" size="3" disabled [(ngModel)]="user.id" class="form-control"> 
+      <input type="text" placeholder="Enter Name" [(ngModel)]="user.name" class="form-control">
+      <input type="text" placeholder="Enter Email" [(ngModel)]="user.email"  class="form-control"> 
+      <input type="text" placeholder="Enter Phone" [(ngModel)]="user.phone"  class="form-control">
+      <input type="button" class="btn btn-sm btn-success" value="Update User" (click)="updateUser(user)">
+  </div>
+</div>

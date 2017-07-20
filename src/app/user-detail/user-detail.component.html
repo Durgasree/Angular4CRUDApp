@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h5>
+        <i class="fa fa-user"> </i> {{current_user.name | uppercase}} <a routerLink="/editUser/{{current_user.id}}" routerLinkActive="active" > <i class="fa fa-edit"> </i> </a>
+      </h5>
+      <hr>
+    </div>
+    <div class="panel-body">
+
+        <table class="table table-bordered">
+          <tr> <td>Name </td> <td> {{current_user.name}}</td></tr>
+          <tr> <td>Email </td> <td> {{current_user.email}}</td></tr>
+          <tr> <td>Phone </td> <td> {{current_user.phone}}</td></tr>
+        </table>
+      
+    </div>
+    <div class="panel-footer">
+      <a class="btn btn-success btn-sm pull-right" routerLink="/users" routerLinkActive="active" >All Users <i class="fa fa-users"> </i></a>
+    </div>
+  </div>
+</div>
